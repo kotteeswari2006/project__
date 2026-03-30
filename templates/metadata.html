@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Metadata</title>
+    <style>
+        body { font-family: 'Segoe UI', sans-serif; background: #0b0f1a; color: white; padding: 50px; text-align: center; }
+        .box { max-width: 700px; margin: auto; background: #161b2b; padding: 30px; border-radius: 20px; border: 1px solid #2d3748; }
+        .row { display: flex; justify-content: space-between; padding: 15px 0; border-bottom: 1px solid #2d3748; }
+        .purple-btn { background: linear-gradient(135deg, #8b5cf6, #6d28d9); color: white; padding: 12px 25px; border-radius: 50px; text-decoration: none; font-weight: bold; display: inline-block; margin: 10px; }
+    </style>
+</head>
+<body>
+    <a href="/" class="purple-btn" style="background: #4b5563;">🏠 HOME</a>
+    <div class="box">
+        <h2 style="color:#a78bfa;">🔍 Forensic Metadata Details</h2>
+        <div class="row"><span>Filename:</span><span>{{ result.filename }}</span></div>
+        <div class="row"><span>Software Used:</span><span>{{ result.software }}</span></div>
+        <div class="row"><span>Device:</span><span>{{ result.device }}</span></div>
+        <div class="row"><span>Final Verdict:</span><span style="color:{{result.color}}; font-weight:bold;">{{ result.status }}</span></div>
+    </div>
+</body>
+</html>

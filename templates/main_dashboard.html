@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Dashboard</title>
+    <style>
+        body { font-family: 'Segoe UI', sans-serif; background: #0b0f1a; color: white; height: 100vh; display: flex; align-items: center; justify-content: center; margin: 0; }
+        h1 { font-size: 3rem; color: #3b82f6; margin-bottom: 40px; }
+        .grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 25px; width: 800px; }
+        .card { background: #161b2b; padding: 40px; border-radius: 20px; border: 1px solid #2d3748; text-decoration: none; color: white; transition: 0.3s; text-align: center; }
+        .card:hover { transform: translateY(-10px); border-color: #3b82f6; box-shadow: 0 10px 30px rgba(59, 130, 246, 0.2); }
+        .card span { display: block; margin-top: 10px; font-weight: bold; }
+    </style>
+</head>
+<body>
+    <div>
+        <h1>🛡️ DOCUMENT FORENSICS</h1>
+        <div class="grid">
+            <a href="/scan_page" class="card">📷<span>NEW SCAN</span></a>
+            <a href="/metadata" class="card">📊<span>METADATA</span></a>
+            <a href="/history" class="card">📜<span>HISTORY</span></a>
+            <a href="/download_report" class="card">📄<span>DOWNLOAD PDF</span></a>
+        </div>
+    </div>
+</body>
+</html>

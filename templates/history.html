@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>History</title>
+    <style>
+        body { font-family: 'Segoe UI', sans-serif; background: #0b0f1a; color: white; padding: 50px; text-align: center; }
+        .container { max-width: 1000px; margin: auto; background: #161b2b; padding: 30px; border-radius: 20px; }
+        table { width: 100%; border-collapse: collapse; margin-top: 20px; }
+        th, td { padding: 15px; border-bottom: 1px solid #2d3748; text-align: left; }
+        .purple-btn { background: linear-gradient(135deg, #8b5cf6, #6d28d9); color: white; padding: 12px 25px; border-radius: 50px; text-decoration: none; font-weight: bold; }
+    </style>
+</head>
+<body>
+    <a href="/" class="purple-btn" style="background: #4b5563;">🏠 HOME</a>
+    <div class="container">
+        <h2 style="color:#a78bfa;">📜 Global Verification History</h2>
+        <table>
+            <thead><tr><th>File Name</th><th>Integrity</th><th>Status</th><th>Scan Time</th></tr></thead>
+            <tbody>
+                {% for item in history %}
+                <tr>
+                    <td>{{ item.filename }}</td>
+                    <td style="color:#a78bfa; font-weight:bold;">{{ item.score }}%</td>
+                    <td style="color:{{item.color}}; font-weight:bold;">{{ item.status }}</td>
+                    <td>{{ item.datetime }}</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+</body>
+</html>
